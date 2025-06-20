@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>ESP32 Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>ESP32 Dashboard</h1>
+
+<div class="card">
+  <p><span class="icon">🌡️</span> Suhu: <span id="temp">--</span> °C</p>
+  <p><span class="icon">💧</span> Kelembapan: <span id="hum">--</span> %</p>
+  <button onclick="turnOn()">Nyalakan LED 🔴</button>
+  <button onclick="turnOff()">Matikan LED ⚫</button>
+</div>
+
+<div class="card">
+  <canvas id="sensorChart" height="300"></canvas>
+</div>
+
+</body>
+</html>
